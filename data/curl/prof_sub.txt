@@ -1,0 +1,8 @@
+curl -X POST \
+  http://vo-hub.com:8888/api/prizes/v1/prof_subs/ \
+  -H 'content-type: application/json' \
+  -H 'token: eac6a5298554e5d468f5cf9ff661043e' \
+  -d '{
+    "profile_id": 2,
+    "subscription_id": 1
+}'

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Prizes</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_prizes">Prizes</string>
+    <string name="action_subscriptions">Subscriptions</string>
+    <string name="action_winners">Winners</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_profile">Profile</string>
+
+    <string name="loading">Loading…</string>
+    <string name="error_msg">Error.\nTry again later</string>
+    <string name="no_data_msg">No data</string>
+    <string name="no_internet_screen_msg">No Internet connection</string>
+
+</resources>

@@ -1,0 +1,105 @@
+Prizes
+/api/prizes/v1/
+    +1) Get prizes data:
+        get prizes list:
+            URL: /api/prizes/v1/prizes/
+            method: GET
+        get prizes detail:
+            URL: /api/prizes/v1/prizes/<id>/
+            method: GET
+        
+    +2) User registration :
+        URL: /api/prizes/v1/sign_in/
+        method: POST
+        headers: {Content-Type: application/json}
+        json-body: {
+	        "first_name": "", (CharField, length=32)
+	        "last_name": "", (CharField, max_length=32)
+	        "phone": "", (CharField, max_length=16, phone[0]='+', phone[0:].is_digit, unique=True)
+	        "device_id": "" (CharField, max_length=255)
+        }
+        response 200
+        
+    +3) Get user data:
+        URL: /api/prizes/v1/profile/  
+        or 
+        URL: /api/prizes/v1/profile/<user_id>/ 
+        method: GET
+        headers: {token: <user_token>}  
+        
+    +4) User login:
+        URL: /api/prizes/v1/login/
+        method: POST
+        headers: {Content-Type: application/json}
+        json-body: {
+	        "phone": "", (CharField, max_length=16, phone[0]='+', phone[0:].is_digit)
+	        "device_id": "" (CharField, max_length=255)
+        } 
+        response 200
+        
+    +5) User log_out:
+        URL: /api/prizes/v1/log_out/
+        method: POST
+        headers: {Content-Type: application/json, token: <user_token>}
+        json-body: {
+	        "mode": <mode> (mode="0"; mode="1"; mode="2" -- mode 0: Delete only current session
+                                                            mode 1: Delete all sessions
+                                                            mode 2: Delete all sessions exclude current session)
+        }
+        
+    +6) Get subscriptions:
+        URL: /api/prizes/v1/subscriptions/
+        method: GET
+        
+    +7) Profile_Subscription:
+        URL: /api/prizes/v1/prof_subs/
+            method: GET
+                or URL: /api/prizes/v1/prof_subs/<Profile_Subscription_id>
+                headers: {token: <user_token>} 
+
+            method: POST
+                headers: {Content-Type: application/json, token: <user_token>}
+                json-body: {
+	                "profile_id": <profile_id>,
+	                "subscription_id": <subscription_id>
+                }
+                !!! profile_id + subscription_id + from_date(today) = UNIQUE 
+    +8) Get winners:
+        URL: /api/prizes/v1/winners/
+        method: GET
+        
+    +9) Prize_Participant:
+        get all data:
+            URL: /api/prizes/v1/participant/
+            method: GET
+            headers: {token: <user_token>} 
+        
+        get datail data:
+            URL: /api/prizes/v1/participant/<participant_id>
+            method: GET
+            headers: {token: <user_token>} 
+        
+        get data by prize:
+            URL: /api/prizes/v1/participant/?field=prize&param_id=<prize_id>
+            method: GET
+            headers: {token: <user_token>} 
+            
+        get data by profile:
+            URL: /api/prizes/v1/participant/?field=profile&param_id=<profile_id>
+            method: GET
+            headers: {token: <user_token>}           
+
+    +10) Get token:
+        URL: /api/prizes/v1/token/
+        method: POST
+        headers: {Content-Type: application/json}
+        json-body: {
+            "phone": "", (CharField, max_length=16, phone[0]='+', phone[0:].is_digit)
+            "check_code": "", CharField(max_length=6)
+        }
+            
+                                
+                
+        
+        
+         

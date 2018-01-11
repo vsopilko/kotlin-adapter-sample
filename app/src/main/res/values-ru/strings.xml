@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Призы</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_prizes">Призы</string>
+    <string name="action_subscriptions">Подписки</string>
+    <string name="action_winners">Победители</string>
+    <string name="action_settings">Настройки</string>
+
+    <string name="loading">Загрузка…</string>
+    <string name="error_msg">Произошла ошибка\nПопробуйте позже</string>
+</resources>

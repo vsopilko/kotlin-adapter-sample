@@ -1,0 +1,7 @@
+{
+"base_url": "http://vo-hub.com:8888", 
+"errors": [], 
+"meta": {"limit": 20, "next": null, "offset": 0, "previous": null, "total_count": 1}, 
+"objects": [{"day_duration": 1, "description": "", "id": 1, "price": 3.0, "title": "Мировая подписька"}], 
+"success": true
+}

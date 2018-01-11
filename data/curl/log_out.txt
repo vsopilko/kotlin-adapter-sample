@@ -1,0 +1,7 @@
+curl -X POST \
+  http://vo-hub.com:8888/api/prizes/v1/log_out/ \
+  -H 'content-type: application/json' \
+  -H 'token: 7c1345b618e3a265db469054fe3b9f99' \
+  -d '{
+    "mode": 0
+}'
